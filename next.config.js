@@ -1,9 +1,6 @@
-module.exports = {
-  images: {
-    domains: ["res.cloudinary.com", "store.storeimages.cdn-apple.com"],
-  },
+const isProd = process.env.NODE_ENV === 'production';
 
-  env: {
-    stripe_public_key: process.env.STRIPE_PUBLIC_KEY,
-  },
-}
+module.exports = {
+  assetPrefix: isProd ? '/tuanntps33510/' : '',
+  basePath: isProd ? '/tuanntps33510' : '',
+};
